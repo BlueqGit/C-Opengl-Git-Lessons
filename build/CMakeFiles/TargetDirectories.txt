@@ -1,0 +1,3 @@
+C:/Users/Vitaly/Desktop/git-test/build/CMakeFiles/git-test.dir
+C:/Users/Vitaly/Desktop/git-test/build/CMakeFiles/ALL_BUILD.dir
+C:/Users/Vitaly/Desktop/git-test/build/CMakeFiles/ZERO_CHECK.dir

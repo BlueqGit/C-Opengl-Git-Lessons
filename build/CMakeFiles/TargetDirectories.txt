@@ -42,3 +42,6 @@ C:/Users/Vitaly/Desktop/git-test/build/external/glfw/tests/CMakeFiles/triangle-v
 C:/Users/Vitaly/Desktop/git-test/build/external/glfw/tests/CMakeFiles/window.dir
 C:/Users/Vitaly/Desktop/git-test/build/external/glfw/tests/CMakeFiles/INSTALL.dir
 C:/Users/Vitaly/Desktop/git-test/build/external/glfw/docs/CMakeFiles/INSTALL.dir
+C:/Users/Vitaly/Desktop/git-test/build/external/glad/CMakeFiles/glad.dir
+C:/Users/Vitaly/Desktop/git-test/build/external/glad/CMakeFiles/INSTALL.dir
+C:/Users/Vitaly/Desktop/git-test/build/external/glad/CMakeFiles/ALL_BUILD.dir

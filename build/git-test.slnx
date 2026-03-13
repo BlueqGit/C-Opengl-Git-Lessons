@@ -9,7 +9,11 @@
 	</Configurations>
 	<Project Path="git-test.vcxproj" Type="8bc9ceb8-8b4a-11d0-8d11-00a0c91bc942" Id="a304d662-bf9b-371a-9c60-9f0758b559b7">
 		<BuildDependency Project="ZERO_CHECK.vcxproj"/>
+		<BuildDependency Project="external/glad/glad.vcxproj"/>
 		<BuildDependency Project="external/glfw/src/glfw.vcxproj"/>
+	</Project>
+	<Project Path="external/glad/glad.vcxproj" Type="8bc9ceb8-8b4a-11d0-8d11-00a0c91bc942" Id="c14f580d-9983-3fab-abac-8a9a3bdd4286">
+		<BuildDependency Project="ZERO_CHECK.vcxproj"/>
 	</Project>
 	<Folder Name="/CMakePredefinedTargets/">
 		<Project Path="ALL_BUILD.vcxproj" Type="8bc9ceb8-8b4a-11d0-8d11-00a0c91bc942" Id="d4e503f1-a4e9-3123-a43b-5ad2e00bde35" DefaultStartup="true">
@@ -23,6 +27,7 @@
 			<BuildDependency Project="external/glfw/tests/gamma.vcxproj"/>
 			<BuildDependency Project="external/glfw/examples/gears.vcxproj"/>
 			<BuildDependency Project="git-test.vcxproj"/>
+			<BuildDependency Project="external/glad/glad.vcxproj"/>
 			<BuildDependency Project="external/glfw/src/glfw.vcxproj"/>
 			<BuildDependency Project="external/glfw/tests/glfwinfo.vcxproj"/>
 			<BuildDependency Project="external/glfw/examples/heightmap.vcxproj"/>

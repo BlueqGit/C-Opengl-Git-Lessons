@@ -214,6 +214,10 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <Project>{A304D662-BF9B-371A-9C60-9F0758B559B7}</Project>
       <Name>git-test</Name>
     </ProjectReference>
+    <ProjectReference Include="C:\Users\Vitaly\Desktop\git-test\build\external\glad\glad.vcxproj">
+      <Project>{C14F580D-9983-3FAB-ABAC-8A9A3BDD4286}</Project>
+      <Name>glad</Name>
+    </ProjectReference>
     <ProjectReference Include="C:\Users\Vitaly\Desktop\git-test\build\external\glfw\src\glfw.vcxproj">
       <Project>{7E861426-51C2-32E8-AD06-8C45938A783B}</Project>
       <Name>glfw</Name>

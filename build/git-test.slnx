@@ -9,16 +9,200 @@
 	</Configurations>
 	<Project Path="git-test.vcxproj" Type="8bc9ceb8-8b4a-11d0-8d11-00a0c91bc942" Id="a304d662-bf9b-371a-9c60-9f0758b559b7">
 		<BuildDependency Project="ZERO_CHECK.vcxproj"/>
+		<BuildDependency Project="external/glfw/src/glfw.vcxproj"/>
 	</Project>
 	<Folder Name="/CMakePredefinedTargets/">
 		<Project Path="ALL_BUILD.vcxproj" Type="8bc9ceb8-8b4a-11d0-8d11-00a0c91bc942" Id="d4e503f1-a4e9-3123-a43b-5ad2e00bde35" DefaultStartup="true">
 			<BuildDependency Project="ZERO_CHECK.vcxproj"/>
+			<BuildDependency Project="external/glfw/tests/allocator.vcxproj"/>
+			<BuildDependency Project="external/glfw/examples/boing.vcxproj"/>
+			<BuildDependency Project="external/glfw/tests/clipboard.vcxproj"/>
+			<BuildDependency Project="external/glfw/tests/cursor.vcxproj"/>
+			<BuildDependency Project="external/glfw/tests/empty.vcxproj"/>
+			<BuildDependency Project="external/glfw/tests/events.vcxproj"/>
+			<BuildDependency Project="external/glfw/tests/gamma.vcxproj"/>
+			<BuildDependency Project="external/glfw/examples/gears.vcxproj"/>
 			<BuildDependency Project="git-test.vcxproj"/>
+			<BuildDependency Project="external/glfw/src/glfw.vcxproj"/>
+			<BuildDependency Project="external/glfw/tests/glfwinfo.vcxproj"/>
+			<BuildDependency Project="external/glfw/examples/heightmap.vcxproj"/>
+			<BuildDependency Project="external/glfw/tests/icon.vcxproj"/>
+			<BuildDependency Project="external/glfw/tests/iconify.vcxproj"/>
+			<BuildDependency Project="external/glfw/tests/inputlag.vcxproj"/>
+			<BuildDependency Project="external/glfw/tests/joysticks.vcxproj"/>
+			<BuildDependency Project="external/glfw/tests/monitors.vcxproj"/>
+			<BuildDependency Project="external/glfw/tests/msaa.vcxproj"/>
+			<BuildDependency Project="external/glfw/examples/offscreen.vcxproj"/>
+			<BuildDependency Project="external/glfw/examples/particles.vcxproj"/>
+			<BuildDependency Project="external/glfw/tests/reopen.vcxproj"/>
+			<BuildDependency Project="external/glfw/examples/sharing.vcxproj"/>
+			<BuildDependency Project="external/glfw/examples/splitview.vcxproj"/>
+			<BuildDependency Project="external/glfw/tests/tearing.vcxproj"/>
+			<BuildDependency Project="external/glfw/tests/threads.vcxproj"/>
+			<BuildDependency Project="external/glfw/tests/timeout.vcxproj"/>
+			<BuildDependency Project="external/glfw/tests/title.vcxproj"/>
+			<BuildDependency Project="external/glfw/examples/triangle-opengl.vcxproj"/>
+			<BuildDependency Project="external/glfw/examples/triangle-opengles.vcxproj"/>
+			<BuildDependency Project="external/glfw/tests/triangle-vulkan.vcxproj"/>
+			<BuildDependency Project="external/glfw/examples/wave.vcxproj"/>
+			<BuildDependency Project="external/glfw/tests/window.vcxproj"/>
+			<BuildDependency Project="external/glfw/examples/windows.vcxproj"/>
+		</Project>
+		<Project Path="INSTALL.vcxproj" Type="8bc9ceb8-8b4a-11d0-8d11-00a0c91bc942" Id="04f098b6-1ce9-304a-8c3e-a998d2a98599">
+			<BuildDependency Project="ALL_BUILD.vcxproj"/>
+			<BuildDependency Project="ZERO_CHECK.vcxproj"/>
 			<Build Solution="Debug|*" Project="false"/>
 			<Build Solution="Release|*" Project="false"/>
 			<Build Solution="MinSizeRel|*" Project="false"/>
 			<Build Solution="RelWithDebInfo|*" Project="false"/>
 		</Project>
 		<Project Path="ZERO_CHECK.vcxproj" Type="8bc9ceb8-8b4a-11d0-8d11-00a0c91bc942" Id="fddb57d5-a3e9-3fa9-9ca7-c413906eb5f8"/>
+	</Folder>
+	<Folder Name="/GLFW3/">
+		<Project Path="external/glfw/src/glfw.vcxproj" Type="8bc9ceb8-8b4a-11d0-8d11-00a0c91bc942" Id="7e861426-51c2-32e8-ad06-8c45938a783b">
+			<BuildDependency Project="ZERO_CHECK.vcxproj"/>
+		</Project>
+		<Project Path="external/glfw/uninstall.vcxproj" Type="8bc9ceb8-8b4a-11d0-8d11-00a0c91bc942" Id="eea32c19-b206-3faa-aff2-fd9397470980">
+			<BuildDependency Project="ZERO_CHECK.vcxproj"/>
+			<Build Solution="Debug|*" Project="false"/>
+			<Build Solution="Release|*" Project="false"/>
+			<Build Solution="MinSizeRel|*" Project="false"/>
+			<Build Solution="RelWithDebInfo|*" Project="false"/>
+		</Project>
+		<Project Path="external/glfw/src/update_mappings.vcxproj" Type="8bc9ceb8-8b4a-11d0-8d11-00a0c91bc942" Id="abb976d5-f9b1-3330-9efb-19ba08cca6ed">
+			<BuildDependency Project="ZERO_CHECK.vcxproj"/>
+			<Build Solution="Debug|*" Project="false"/>
+			<Build Solution="Release|*" Project="false"/>
+			<Build Solution="MinSizeRel|*" Project="false"/>
+			<Build Solution="RelWithDebInfo|*" Project="false"/>
+		</Project>
+	</Folder>
+	<Folder Name="/GLFW3/Examples/">
+		<Project Path="external/glfw/examples/boing.vcxproj" Type="8bc9ceb8-8b4a-11d0-8d11-00a0c91bc942" Id="8ce6e369-75aa-3226-9c20-33dd02945a74">
+			<BuildDependency Project="ZERO_CHECK.vcxproj"/>
+			<BuildDependency Project="external/glfw/src/glfw.vcxproj"/>
+		</Project>
+		<Project Path="external/glfw/examples/gears.vcxproj" Type="8bc9ceb8-8b4a-11d0-8d11-00a0c91bc942" Id="d8a7ea33-436a-3bac-8f5e-3a7ac5d63942">
+			<BuildDependency Project="ZERO_CHECK.vcxproj"/>
+			<BuildDependency Project="external/glfw/src/glfw.vcxproj"/>
+		</Project>
+		<Project Path="external/glfw/examples/heightmap.vcxproj" Type="8bc9ceb8-8b4a-11d0-8d11-00a0c91bc942" Id="3db6d03d-8e2f-368c-84a5-5b5ab457540b">
+			<BuildDependency Project="ZERO_CHECK.vcxproj"/>
+			<BuildDependency Project="external/glfw/src/glfw.vcxproj"/>
+		</Project>
+		<Project Path="external/glfw/examples/offscreen.vcxproj" Type="8bc9ceb8-8b4a-11d0-8d11-00a0c91bc942" Id="2499fd34-3efe-3998-9d9a-4ee20d999b50">
+			<BuildDependency Project="ZERO_CHECK.vcxproj"/>
+			<BuildDependency Project="external/glfw/src/glfw.vcxproj"/>
+		</Project>
+		<Project Path="external/glfw/examples/particles.vcxproj" Type="8bc9ceb8-8b4a-11d0-8d11-00a0c91bc942" Id="a935733e-dba9-3217-bf3e-ffc39b602541">
+			<BuildDependency Project="ZERO_CHECK.vcxproj"/>
+			<BuildDependency Project="external/glfw/src/glfw.vcxproj"/>
+		</Project>
+		<Project Path="external/glfw/examples/sharing.vcxproj" Type="8bc9ceb8-8b4a-11d0-8d11-00a0c91bc942" Id="839e4fe5-c29a-36e4-ab1e-9929ef6ec572">
+			<BuildDependency Project="ZERO_CHECK.vcxproj"/>
+			<BuildDependency Project="external/glfw/src/glfw.vcxproj"/>
+		</Project>
+		<Project Path="external/glfw/examples/splitview.vcxproj" Type="8bc9ceb8-8b4a-11d0-8d11-00a0c91bc942" Id="3b240dfc-4115-380c-b370-c1f27e539581">
+			<BuildDependency Project="ZERO_CHECK.vcxproj"/>
+			<BuildDependency Project="external/glfw/src/glfw.vcxproj"/>
+		</Project>
+		<Project Path="external/glfw/examples/triangle-opengl.vcxproj" Type="8bc9ceb8-8b4a-11d0-8d11-00a0c91bc942" Id="101a8737-246b-3be9-857c-13664feaf01b">
+			<BuildDependency Project="ZERO_CHECK.vcxproj"/>
+			<BuildDependency Project="external/glfw/src/glfw.vcxproj"/>
+		</Project>
+		<Project Path="external/glfw/examples/triangle-opengles.vcxproj" Type="8bc9ceb8-8b4a-11d0-8d11-00a0c91bc942" Id="08fd1729-2b0a-35aa-b232-1973a5b5b9b0">
+			<BuildDependency Project="ZERO_CHECK.vcxproj"/>
+			<BuildDependency Project="external/glfw/src/glfw.vcxproj"/>
+		</Project>
+		<Project Path="external/glfw/examples/wave.vcxproj" Type="8bc9ceb8-8b4a-11d0-8d11-00a0c91bc942" Id="eb3261ff-1087-34b6-ad3c-aef7c1ed59d5">
+			<BuildDependency Project="ZERO_CHECK.vcxproj"/>
+			<BuildDependency Project="external/glfw/src/glfw.vcxproj"/>
+		</Project>
+		<Project Path="external/glfw/examples/windows.vcxproj" Type="8bc9ceb8-8b4a-11d0-8d11-00a0c91bc942" Id="669675e3-4f8f-3be7-afac-573b9d169888">
+			<BuildDependency Project="ZERO_CHECK.vcxproj"/>
+			<BuildDependency Project="external/glfw/src/glfw.vcxproj"/>
+		</Project>
+	</Folder>
+	<Folder Name="/GLFW3/Tests/">
+		<Project Path="external/glfw/tests/allocator.vcxproj" Type="8bc9ceb8-8b4a-11d0-8d11-00a0c91bc942" Id="964c1c04-1975-3bf9-84e0-a86bd3f21d79">
+			<BuildDependency Project="ZERO_CHECK.vcxproj"/>
+			<BuildDependency Project="external/glfw/src/glfw.vcxproj"/>
+		</Project>
+		<Project Path="external/glfw/tests/clipboard.vcxproj" Type="8bc9ceb8-8b4a-11d0-8d11-00a0c91bc942" Id="73103e03-4fc5-343a-b738-0f45fc7398e0">
+			<BuildDependency Project="ZERO_CHECK.vcxproj"/>
+			<BuildDependency Project="external/glfw/src/glfw.vcxproj"/>
+		</Project>
+		<Project Path="external/glfw/tests/cursor.vcxproj" Type="8bc9ceb8-8b4a-11d0-8d11-00a0c91bc942" Id="88a1d718-a72e-3896-b0ad-82a227c0630d">
+			<BuildDependency Project="ZERO_CHECK.vcxproj"/>
+			<BuildDependency Project="external/glfw/src/glfw.vcxproj"/>
+		</Project>
+		<Project Path="external/glfw/tests/empty.vcxproj" Type="8bc9ceb8-8b4a-11d0-8d11-00a0c91bc942" Id="e2c47153-7145-377d-ab05-c9e963247166">
+			<BuildDependency Project="ZERO_CHECK.vcxproj"/>
+			<BuildDependency Project="external/glfw/src/glfw.vcxproj"/>
+		</Project>
+		<Project Path="external/glfw/tests/events.vcxproj" Type="8bc9ceb8-8b4a-11d0-8d11-00a0c91bc942" Id="7e5fcf52-5bb9-33c6-877b-0bb9c543ed84">
+			<BuildDependency Project="ZERO_CHECK.vcxproj"/>
+			<BuildDependency Project="external/glfw/src/glfw.vcxproj"/>
+		</Project>
+		<Project Path="external/glfw/tests/gamma.vcxproj" Type="8bc9ceb8-8b4a-11d0-8d11-00a0c91bc942" Id="701e475c-c9bc-3c31-8fab-9aec2895e333">
+			<BuildDependency Project="ZERO_CHECK.vcxproj"/>
+			<BuildDependency Project="external/glfw/src/glfw.vcxproj"/>
+		</Project>
+		<Project Path="external/glfw/tests/glfwinfo.vcxproj" Type="8bc9ceb8-8b4a-11d0-8d11-00a0c91bc942" Id="1e66863b-7b2e-3c17-b80e-b84b76ed5713">
+			<BuildDependency Project="ZERO_CHECK.vcxproj"/>
+			<BuildDependency Project="external/glfw/src/glfw.vcxproj"/>
+		</Project>
+		<Project Path="external/glfw/tests/icon.vcxproj" Type="8bc9ceb8-8b4a-11d0-8d11-00a0c91bc942" Id="e25e7f1b-36bf-3a0b-8071-725e14fa38ff">
+			<BuildDependency Project="ZERO_CHECK.vcxproj"/>
+			<BuildDependency Project="external/glfw/src/glfw.vcxproj"/>
+		</Project>
+		<Project Path="external/glfw/tests/iconify.vcxproj" Type="8bc9ceb8-8b4a-11d0-8d11-00a0c91bc942" Id="40bdd3da-34ad-3829-a042-6688afec2a8a">
+			<BuildDependency Project="ZERO_CHECK.vcxproj"/>
+			<BuildDependency Project="external/glfw/src/glfw.vcxproj"/>
+		</Project>
+		<Project Path="external/glfw/tests/inputlag.vcxproj" Type="8bc9ceb8-8b4a-11d0-8d11-00a0c91bc942" Id="7e5c1090-f90a-3f2b-a9a3-0cff80154927">
+			<BuildDependency Project="ZERO_CHECK.vcxproj"/>
+			<BuildDependency Project="external/glfw/src/glfw.vcxproj"/>
+		</Project>
+		<Project Path="external/glfw/tests/joysticks.vcxproj" Type="8bc9ceb8-8b4a-11d0-8d11-00a0c91bc942" Id="4ab6a9cd-cfc5-37cf-bf67-d0361f03be82">
+			<BuildDependency Project="ZERO_CHECK.vcxproj"/>
+			<BuildDependency Project="external/glfw/src/glfw.vcxproj"/>
+		</Project>
+		<Project Path="external/glfw/tests/monitors.vcxproj" Type="8bc9ceb8-8b4a-11d0-8d11-00a0c91bc942" Id="c0f4e53a-1f9c-3417-bb8a-d068ceac01a3">
+			<BuildDependency Project="ZERO_CHECK.vcxproj"/>
+			<BuildDependency Project="external/glfw/src/glfw.vcxproj"/>
+		</Project>
+		<Project Path="external/glfw/tests/msaa.vcxproj" Type="8bc9ceb8-8b4a-11d0-8d11-00a0c91bc942" Id="f17dc65b-489f-3965-a774-581f6bd10362">
+			<BuildDependency Project="ZERO_CHECK.vcxproj"/>
+			<BuildDependency Project="external/glfw/src/glfw.vcxproj"/>
+		</Project>
+		<Project Path="external/glfw/tests/reopen.vcxproj" Type="8bc9ceb8-8b4a-11d0-8d11-00a0c91bc942" Id="4b1c7810-2c11-321e-84b7-4c11a28aedd5">
+			<BuildDependency Project="ZERO_CHECK.vcxproj"/>
+			<BuildDependency Project="external/glfw/src/glfw.vcxproj"/>
+		</Project>
+		<Project Path="external/glfw/tests/tearing.vcxproj" Type="8bc9ceb8-8b4a-11d0-8d11-00a0c91bc942" Id="95c3ef9d-1614-370b-b14d-96248c854844">
+			<BuildDependency Project="ZERO_CHECK.vcxproj"/>
+			<BuildDependency Project="external/glfw/src/glfw.vcxproj"/>
+		</Project>
+		<Project Path="external/glfw/tests/threads.vcxproj" Type="8bc9ceb8-8b4a-11d0-8d11-00a0c91bc942" Id="be3b0832-e61a-3579-b02f-8fc43069dbe8">
+			<BuildDependency Project="ZERO_CHECK.vcxproj"/>
+			<BuildDependency Project="external/glfw/src/glfw.vcxproj"/>
+		</Project>
+		<Project Path="external/glfw/tests/timeout.vcxproj" Type="8bc9ceb8-8b4a-11d0-8d11-00a0c91bc942" Id="c36abdb8-1bf6-3896-b5a0-3a70266b98c8">
+			<BuildDependency Project="ZERO_CHECK.vcxproj"/>
+			<BuildDependency Project="external/glfw/src/glfw.vcxproj"/>
+		</Project>
+		<Project Path="external/glfw/tests/title.vcxproj" Type="8bc9ceb8-8b4a-11d0-8d11-00a0c91bc942" Id="9ecef852-f3cd-387f-b460-8cc5cdf37424">
+			<BuildDependency Project="ZERO_CHECK.vcxproj"/>
+			<BuildDependency Project="external/glfw/src/glfw.vcxproj"/>
+		</Project>
+		<Project Path="external/glfw/tests/triangle-vulkan.vcxproj" Type="8bc9ceb8-8b4a-11d0-8d11-00a0c91bc942" Id="8d4e5179-81fe-3fff-8447-2901cf2ebc1d">
+			<BuildDependency Project="ZERO_CHECK.vcxproj"/>
+			<BuildDependency Project="external/glfw/src/glfw.vcxproj"/>
+		</Project>
+		<Project Path="external/glfw/tests/window.vcxproj" Type="8bc9ceb8-8b4a-11d0-8d11-00a0c91bc942" Id="cc5fd567-31a4-348c-9fcc-23b85895b6a7">
+			<BuildDependency Project="ZERO_CHECK.vcxproj"/>
+			<BuildDependency Project="external/glfw/src/glfw.vcxproj"/>
+		</Project>
 	</Folder>
 </Solution>

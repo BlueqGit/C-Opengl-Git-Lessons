@@ -1,0 +1,5 @@
+﻿  Building Custom Rule C:/Users/Vitaly/Desktop/git-test/external/glfw/tests/CMakeLists.txt
+  clipboard.c
+  getopt.c
+  Generating Code...
+  clipboard.vcxproj -> C:\Users\Vitaly\Desktop\git-test\build\external\glfw\tests\Release\clipboard.exe

@@ -10,3 +10,6 @@ set(GLFW_INSTALL OFF CACHE BOOL "" FORGE)
 
 add_subdirectory(C:/Users/Vitaly/Desktop/git-test/external/glfw)
 target_link_libraries(${PROJECT_NAME} glfw)
+
+add_subdirectory(external/glad)
+target_link_libraries(${PROJECT_NAME} glad)

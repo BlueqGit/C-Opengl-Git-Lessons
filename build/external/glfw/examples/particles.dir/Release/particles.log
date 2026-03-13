@@ -1,0 +1,6 @@
+﻿  Building Custom Rule C:/Users/Vitaly/Desktop/git-test/external/glfw/examples/CMakeLists.txt
+  particles.c
+  tinycthread.c
+  getopt.c
+  Generating Code...
+  particles.vcxproj -> C:\Users\Vitaly\Desktop\git-test\build\external\glfw\examples\Release\particles.exe

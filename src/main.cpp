@@ -35,7 +35,7 @@ int main(void)
 		return -1;
 	}
 	
-	glClearColor(0, 1, 0, 1);
+	glClearColor(0, 1, 1, 1);
     while (!glfwWindowShouldClose(window))
     {
         glClear(GL_COLOR_BUFFER_BIT);

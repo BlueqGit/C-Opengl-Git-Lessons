@@ -1,13 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="18.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <CustomBuild Include="C:\Users\Vitaly\Desktop\git-test\build\CMakeFiles\349d4653df0215b6e983c4cf6486ce28\INSTALL_force.rule">
+    <CustomBuild Include="C:\Users\Vitaly\desktop\git-test\build\CMakeFiles\c80b88233c3d6665918ad3038dbde9d1\INSTALL_force.rule">
       <Filter>CMake Rules</Filter>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="CMake Rules">
-      <UniqueIdentifier>{D99DC311-5805-3035-A14B-E61C09F216EA}</UniqueIdentifier>
+      <UniqueIdentifier>{2DA1AFCF-4255-3C2A-8F8A-5FBB1E7FC70B}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

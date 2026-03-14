@@ -20,10 +20,10 @@
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Header Files">
-      <UniqueIdentifier>{740286CC-69D0-3289-9ABA-5AA77D93191A}</UniqueIdentifier>
+      <UniqueIdentifier>{046A0824-7575-37C4-8782-529CAB301662}</UniqueIdentifier>
     </Filter>
     <Filter Include="Source Files">
-      <UniqueIdentifier>{FC83998B-6ABA-3673-AE6C-120F24D96658}</UniqueIdentifier>
+      <UniqueIdentifier>{05260DCD-C253-3E20-8D2E-3594BE9171F5}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

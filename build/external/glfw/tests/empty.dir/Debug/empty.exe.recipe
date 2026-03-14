@@ -2,10 +2,10 @@
 <Project>
   <ProjectOutputs>
     <ProjectOutput>
-      <FullPath>C:\Users\Vitaly\Desktop\git-test\build\x64\Debug\ZERO_CHECK</FullPath>
+      <FullPath>C:\Users\Vitaly\desktop\git-test\build\x64\Debug\ZERO_CHECK</FullPath>
     </ProjectOutput>
     <ProjectOutput>
-      <FullPath>C:\Users\Vitaly\Desktop\git-test\build\external\glfw\tests\Debug\empty.exe</FullPath>
+      <FullPath>C:\Users\Vitaly\desktop\git-test\build\external\glfw\tests\Debug\empty.exe</FullPath>
     </ProjectOutput>
   </ProjectOutputs>
   <ContentFiles />

@@ -1,6 +1,6 @@
 ^C:\USERS\VITALY\DESKTOP\GIT-TEST\EXTERNAL\GLFW\EXAMPLES\CMAKELISTS.TXT
 setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/Vitaly/Desktop/git-test -BC:/Users/Vitaly/Desktop/git-test/build --check-stamp-file C:/Users/Vitaly/Desktop/git-test/build/external/glfw/examples/CMakeFiles/generate.stamp
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/Vitaly/Desktop/git-test -BC:/Users/Vitaly/desktop/git-test/build --check-stamp-file C:/Users/Vitaly/desktop/git-test/build/external/glfw/examples/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone

@@ -22,7 +22,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{7E5C1090-F90A-3F2B-A9A3-0CFF80154927}</ProjectGuid>
+    <ProjectGuid>{D9C4AA6B-992E-373E-AAA6-57AD5AADF2B8}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <WindowsTargetPlatformVersion>10.0.26100.0</WindowsTargetPlatformVersion>
     <Platform>x64</Platform>
@@ -59,25 +59,25 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup>
     <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\Vitaly\Desktop\git-test\build\external\glfw\tests\Debug\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\Vitaly\desktop\git-test\build\external\glfw\tests\Debug\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">inputlag.dir\Debug\</IntDir>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">inputlag</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.exe</TargetExt>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</LinkIncremental>
     <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</GenerateManifest>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\Vitaly\Desktop\git-test\build\external\glfw\tests\Release\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\Vitaly\desktop\git-test\build\external\glfw\tests\Release\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">inputlag.dir\Release\</IntDir>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">inputlag</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.exe</TargetExt>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkIncremental>
     <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</GenerateManifest>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\Vitaly\Desktop\git-test\build\external\glfw\tests\MinSizeRel\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\Vitaly\desktop\git-test\build\external\glfw\tests\MinSizeRel\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">inputlag.dir\MinSizeRel\</IntDir>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">inputlag</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">.exe</TargetExt>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkIncremental>
     <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">true</GenerateManifest>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\Vitaly\Desktop\git-test\build\external\glfw\tests\RelWithDebInfo\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\Vitaly\desktop\git-test\build\external\glfw\tests\RelWithDebInfo\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">inputlag.dir\RelWithDebInfo\</IntDir>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">inputlag</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">.exe</TargetExt>
@@ -129,9 +129,9 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
       <ImageHasSafeExceptionHandlers></ImageHasSafeExceptionHandlers>
-      <ImportLibrary>C:/Users/Vitaly/Desktop/git-test/build/external/glfw/tests/Debug/inputlag.lib</ImportLibrary>
+      <ImportLibrary>C:/Users/Vitaly/desktop/git-test/build/external/glfw/tests/Debug/inputlag.lib</ImportLibrary>
       <LinkErrorReporting></LinkErrorReporting>
-      <ProgramDataBaseFile>C:/Users/Vitaly/Desktop/git-test/build/external/glfw/tests/Debug/inputlag.pdb</ProgramDataBaseFile>
+      <ProgramDataBaseFile>C:/Users/Vitaly/desktop/git-test/build/external/glfw/tests/Debug/inputlag.pdb</ProgramDataBaseFile>
       <RandomizedBaseAddress></RandomizedBaseAddress>
       <SubSystem>Windows</SubSystem>
     </Link>
@@ -185,9 +185,9 @@
       <GenerateDebugInformation>false</GenerateDebugInformation>
       <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
       <ImageHasSafeExceptionHandlers></ImageHasSafeExceptionHandlers>
-      <ImportLibrary>C:/Users/Vitaly/Desktop/git-test/build/external/glfw/tests/Release/inputlag.lib</ImportLibrary>
+      <ImportLibrary>C:/Users/Vitaly/desktop/git-test/build/external/glfw/tests/Release/inputlag.lib</ImportLibrary>
       <LinkErrorReporting></LinkErrorReporting>
-      <ProgramDataBaseFile>C:/Users/Vitaly/Desktop/git-test/build/external/glfw/tests/Release/inputlag.pdb</ProgramDataBaseFile>
+      <ProgramDataBaseFile>C:/Users/Vitaly/desktop/git-test/build/external/glfw/tests/Release/inputlag.pdb</ProgramDataBaseFile>
       <RandomizedBaseAddress></RandomizedBaseAddress>
       <SubSystem>Windows</SubSystem>
     </Link>
@@ -241,9 +241,9 @@
       <GenerateDebugInformation>false</GenerateDebugInformation>
       <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
       <ImageHasSafeExceptionHandlers></ImageHasSafeExceptionHandlers>
-      <ImportLibrary>C:/Users/Vitaly/Desktop/git-test/build/external/glfw/tests/MinSizeRel/inputlag.lib</ImportLibrary>
+      <ImportLibrary>C:/Users/Vitaly/desktop/git-test/build/external/glfw/tests/MinSizeRel/inputlag.lib</ImportLibrary>
       <LinkErrorReporting></LinkErrorReporting>
-      <ProgramDataBaseFile>C:/Users/Vitaly/Desktop/git-test/build/external/glfw/tests/MinSizeRel/inputlag.pdb</ProgramDataBaseFile>
+      <ProgramDataBaseFile>C:/Users/Vitaly/desktop/git-test/build/external/glfw/tests/MinSizeRel/inputlag.pdb</ProgramDataBaseFile>
       <RandomizedBaseAddress></RandomizedBaseAddress>
       <SubSystem>Windows</SubSystem>
     </Link>
@@ -296,9 +296,9 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
       <ImageHasSafeExceptionHandlers></ImageHasSafeExceptionHandlers>
-      <ImportLibrary>C:/Users/Vitaly/Desktop/git-test/build/external/glfw/tests/RelWithDebInfo/inputlag.lib</ImportLibrary>
+      <ImportLibrary>C:/Users/Vitaly/desktop/git-test/build/external/glfw/tests/RelWithDebInfo/inputlag.lib</ImportLibrary>
       <LinkErrorReporting></LinkErrorReporting>
-      <ProgramDataBaseFile>C:/Users/Vitaly/Desktop/git-test/build/external/glfw/tests/RelWithDebInfo/inputlag.pdb</ProgramDataBaseFile>
+      <ProgramDataBaseFile>C:/Users/Vitaly/desktop/git-test/build/external/glfw/tests/RelWithDebInfo/inputlag.pdb</ProgramDataBaseFile>
       <RandomizedBaseAddress></RandomizedBaseAddress>
       <SubSystem>Windows</SubSystem>
     </Link>
@@ -311,7 +311,7 @@
       <UseUtf8Encoding>Always</UseUtf8Encoding>
       <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule C:/Users/Vitaly/Desktop/git-test/external/glfw/tests/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/Vitaly/Desktop/git-test -BC:/Users/Vitaly/Desktop/git-test/build --check-stamp-file C:/Users/Vitaly/Desktop/git-test/build/external/glfw/tests/CMakeFiles/generate.stamp
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/Vitaly/Desktop/git-test -BC:/Users/Vitaly/desktop/git-test/build --check-stamp-file C:/Users/Vitaly/desktop/git-test/build/external/glfw/tests/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -320,11 +320,11 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\Vitaly\Desktop\git-test\build\external\glfw\tests\CMakeFiles\generate.stamp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\Vitaly\desktop\git-test\build\external\glfw\tests\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
       <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule C:/Users/Vitaly/Desktop/git-test/external/glfw/tests/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/Vitaly/Desktop/git-test -BC:/Users/Vitaly/Desktop/git-test/build --check-stamp-file C:/Users/Vitaly/Desktop/git-test/build/external/glfw/tests/CMakeFiles/generate.stamp
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/Vitaly/Desktop/git-test -BC:/Users/Vitaly/desktop/git-test/build --check-stamp-file C:/Users/Vitaly/desktop/git-test/build/external/glfw/tests/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -333,11 +333,11 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\Vitaly\Desktop\git-test\build\external\glfw\tests\CMakeFiles\generate.stamp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\Vitaly\desktop\git-test\build\external\glfw\tests\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
       <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule C:/Users/Vitaly/Desktop/git-test/external/glfw/tests/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/Vitaly/Desktop/git-test -BC:/Users/Vitaly/Desktop/git-test/build --check-stamp-file C:/Users/Vitaly/Desktop/git-test/build/external/glfw/tests/CMakeFiles/generate.stamp
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/Vitaly/Desktop/git-test -BC:/Users/Vitaly/desktop/git-test/build --check-stamp-file C:/Users/Vitaly/desktop/git-test/build/external/glfw/tests/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -346,11 +346,11 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\Vitaly\Desktop\git-test\build\external\glfw\tests\CMakeFiles\generate.stamp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\Vitaly\desktop\git-test\build\external\glfw\tests\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
       <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule C:/Users/Vitaly/Desktop/git-test/external/glfw/tests/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/Vitaly/Desktop/git-test -BC:/Users/Vitaly/Desktop/git-test/build --check-stamp-file C:/Users/Vitaly/Desktop/git-test/build/external/glfw/tests/CMakeFiles/generate.stamp
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/Vitaly/Desktop/git-test -BC:/Users/Vitaly/desktop/git-test/build --check-stamp-file C:/Users/Vitaly/desktop/git-test/build/external/glfw/tests/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -359,7 +359,7 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\Vitaly\Desktop\git-test\build\external\glfw\tests\CMakeFiles\generate.stamp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\Vitaly\desktop\git-test\build\external\glfw\tests\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
     </CustomBuild>
   </ItemGroup>
@@ -371,14 +371,14 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
-    <ProjectReference Include="C:\Users\Vitaly\Desktop\git-test\build\ZERO_CHECK.vcxproj">
-      <Project>{FDDB57D5-A3E9-3FA9-9CA7-C413906EB5F8}</Project>
+    <ProjectReference Include="C:\Users\Vitaly\desktop\git-test\build\ZERO_CHECK.vcxproj">
+      <Project>{FB39E5F0-62C6-399C-89D5-A5D4058E9838}</Project>
       <Name>ZERO_CHECK</Name>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </ProjectReference>
-    <ProjectReference Include="C:\Users\Vitaly\Desktop\git-test\build\external\glfw\src\glfw.vcxproj">
-      <Project>{7E861426-51C2-32E8-AD06-8C45938A783B}</Project>
+    <ProjectReference Include="C:\Users\Vitaly\desktop\git-test\build\external\glfw\src\glfw.vcxproj">
+      <Project>{D90CDE20-B0FA-3F4A-8CC2-33C70B6418EC}</Project>
       <Name>glfw</Name>
     </ProjectReference>
   </ItemGroup>

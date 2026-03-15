@@ -1,7 +1,8 @@
 cmake_minimum_required(VERSION 4.3 FATAL_ERROR)
 set(PROJECT_NAME git-test)
 project(${PROJECT_NAME})
-add_executable(${PROJECT_NAME} src/main.cpp)
+set(CMAKE_CXX_STANDART 17)
+add_executable(${PROJECT_NAME} src/main.cpp src/Render/ShaderProgram.cpp src/Render/ShaderProgram.h)
 
 set(GLFW_BUILD_DOCS OFF CACHE BOOL "" FORGE)
 set(GLFW_BUILD_TESTS OFF CACHE BOOL "" FORGE)

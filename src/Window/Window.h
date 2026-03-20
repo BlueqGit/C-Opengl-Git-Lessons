@@ -1,0 +1,26 @@
+#pragma once
+#include <glad/glad.h>
+#include <GLFW/glfw3.h>
+#include <iostream>
+
+namespace Win
+{
+	class Window
+	{
+	public:
+		Window(int SizeX, int SizeY, char* WinName);
+		Window() = delete;
+		Window(const Window&) = delete;
+		~Window();
+		static void glfwWindowSizeCallBack(GLFWwindow* window, int width, int height);
+		static void glfwWindowKeyCallBack(GLFWwindow* window, int key, int scanmode, int action, int mode);
+		GLFWwindow* getWindow();
+		bool getWindowShouldClose();
+	private:
+		GLFWwindow* window;
+		int windowSizeX;
+		int windowSizeY;
+		char* WindowName;
+		bool windowShouldClose;
+	};
+}

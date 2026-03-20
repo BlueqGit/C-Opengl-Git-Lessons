@@ -1,6 +1,6 @@
-#include "ShaderProgram.h"
+#include "Shader.h"
 
-namespace Render
+namespace Shader
 {
 	ShaderProgram::ShaderProgram(const char* VertexShader, const char* FragmentShader)
 	{
@@ -75,22 +75,8 @@ namespace Render
 		glDeleteProgram(this->shaderProgram);
 	}
 
-	ShaderProgram& ShaderProgram::operator=(ShaderProgram&& ShaderProgram) noexcept
+	void ShaderProgram::UseShaderProgram()
 	{
-		glDeleteProgram(this->shaderProgram);
-		this->shaderProgram = ShaderProgram.shaderProgram;
-		isCompiled = ShaderProgram.isCompiled;
-
-		ShaderProgram.isCompiled = false;
-		ShaderProgram.shaderProgram = 0;
-		return *this;
-	}
-	ShaderProgram::ShaderProgram(ShaderProgram&& ShaderProgram) noexcept
-	{
-		this->shaderProgram = ShaderProgram.shaderProgram;
-		isCompiled = ShaderProgram.isCompiled;
-
-		ShaderProgram.isCompiled = false;
-		ShaderProgram.shaderProgram = 0;
+		glUseProgram(this->shaderProgram);
 	}
 }

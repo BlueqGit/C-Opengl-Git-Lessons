@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="18.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\Users\Vitaly\Desktop\NullEngine\external\glad\src\glad.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="C:\Users\Vitaly\Desktop\NullEngine\external\glad\include\glad\glad.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\Vitaly\Desktop\NullEngine\external\glad\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{B72872DA-1BE4-3D67-8045-929B8A03E23D}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{A17C0EB0-07E1-38A4-B413-C9E40FAF98F4}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

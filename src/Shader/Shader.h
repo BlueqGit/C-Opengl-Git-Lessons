@@ -7,11 +7,11 @@ namespace Shader
 	class ShaderProgram
 	{
 	public:
-		ShaderProgram(const char* VertexShader, const char* FragmentShader);
+		ShaderProgram(std::string VertexShader, std::string FragmentShader);
 		~ShaderProgram();
 		ShaderProgram() = delete;
 
-		bool CreateShader(const char* source, GLenum shader_type, GLuint& shader_id);
+		bool CreateShader(std::string source, GLenum shader_type, GLuint& shader_id);
 		void UseShaderProgram();
 
 		void SetShaderProgram(GLuint id);

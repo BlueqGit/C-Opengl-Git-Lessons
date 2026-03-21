@@ -2,7 +2,7 @@
 
 namespace Shader
 {
-	ShaderProgram::ShaderProgram(const char* VertexShader, const char* FragmentShader)
+	ShaderProgram::ShaderProgram(std::string VertexShader, std::string FragmentShader)
 	{
 		GLuint vs;
 		GLuint fs;
@@ -38,10 +38,11 @@ namespace Shader
 		glDeleteShader(fs);
 	}
 
-	bool ShaderProgram::CreateShader(const char* source, GLenum shader_type, GLuint& shader_id)
+	bool ShaderProgram::CreateShader(std::string source, GLenum shader_type, GLuint& shader_id)
 	{
+		const char* src = source.c_str();
 		shader_id = glCreateShader(shader_type);
-		glShaderSource(shader_id, 1, &source, nullptr);
+		glShaderSource(shader_id, 1, &src, nullptr);
 		glCompileShader(shader_id);
 
 		GLint success;

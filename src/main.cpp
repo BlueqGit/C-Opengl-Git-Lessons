@@ -3,22 +3,16 @@
 #include "Reader/Reader.h"
 
 float vertixes[] = {
-    -0.5f, 0.5f, 0.0f,
-    -0.5f, -0.5f, 0.0f,
-    0.5f, -0.5f, 0.0f,
-
-    -0.5f, 0.5f, 0.0f,
-    0.5f, 0.5f, 0.0f,
-    0.5f, -0.5f, 0.0f
+    //pos               //color
+    -0.5f, 0.5f, 0.0f,  1.0f, 0.0f, 0.0f,
+    -0.5f, -0.5f, 0.0f, 0.0f, 1.0f, 0.0f,
+    0.5f, -0.5f, 0.0f,  0.0f, 0.0f, 1.0f,
+    0.5f, 0.5f, 0.0f,   0.0f, 1.0f, 0.0f
 };
-float vertixes_color[] = {
-    1.0f, 0.0f, 0.0f,
-    0.0f, 1.0f, 0.0f,
-    0.0f, 0.0f, 1.0f,
 
-    1.0f, 0.0f, 0.0f,
-    0.0f, 1.0f, 0.0f,
-    0.0f, 0.0f, 1.0f
+unsigned int indices[] = {
+    0, 1, 3,
+    1, 2, 3
 };
 
 int main(void)
@@ -37,7 +31,7 @@ int main(void)
         return -1;
     }
 
-    Mesher::Mesh Mesh(vertixes, vertixes_color, 6);
+    Mesher::Mesh Mesh(vertixes, 4, indices, 6);
 
     Renderer::Render Render;
 

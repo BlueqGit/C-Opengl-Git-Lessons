@@ -2,46 +2,49 @@
 
 namespace Mesher
 {
-	Mesh::Mesh(float* vertixes_tmp, float* colors_tmp, GLint count_vertixes_tmp)
+	Mesh::Mesh(float* vertixes_tmp, GLint count_vertixes_tmp, unsigned int* indices, GLint count_indices_tmp)
 	{
 		this->vertixes = vertixes_tmp;
-		this->colors = colors_tmp;
 		this->count_vertixes = count_vertixes_tmp;
-        this->vertex_vbo = 0;
-        this->colors_vbo = 0;
+        this->count_indices = count_indices_tmp;
+        this->vbo = 0;
         this->vao = 0;
+        this->ebo = 0;
 
-        int c_v_tmp = sizeof(float) * 3 * this->count_vertixes;
+        int c_v_tmp = sizeof(float) * 6 * this->count_vertixes;
+        int c_i_tmp = sizeof(unsigned int) * this->count_indices;
 
-        glGenBuffers(1, &this->vertex_vbo);
-        glBindBuffer(GL_ARRAY_BUFFER, this->vertex_vbo);
-        glBufferData(GL_ARRAY_BUFFER, c_v_tmp, this->vertixes, GL_STATIC_DRAW);
-
-        glGenBuffers(1, &this->colors_vbo);
-        glBindBuffer(GL_ARRAY_BUFFER, this->colors_vbo);
-        glBufferData(GL_ARRAY_BUFFER, c_v_tmp, this->colors, GL_STATIC_DRAW);
+        int stride = 6 * sizeof(float);
 
         glGenVertexArrays(1, &this->vao);
         glBindVertexArray(this->vao);
 
+        glGenBuffers(1, &this->vbo);
+        glBindBuffer(GL_ARRAY_BUFFER, this->vbo);
+        glBufferData(GL_ARRAY_BUFFER, c_v_tmp, this->vertixes, GL_STATIC_DRAW);
+
+        glGenBuffers(1, &this->ebo);
+        glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, this->ebo);
+        glBufferData(GL_ELEMENT_ARRAY_BUFFER, c_i_tmp, indices, GL_STATIC_DRAW);
+
         glEnableVertexAttribArray(0);
-        glBindBuffer(GL_ARRAY_BUFFER, this->vertex_vbo);
-        glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 0, nullptr);
+        glBindBuffer(GL_ARRAY_BUFFER, this->vbo);
+        glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, stride, nullptr);
 
         glEnableVertexAttribArray(1);
-        glBindBuffer(GL_ARRAY_BUFFER, this->colors_vbo);
-        glVertexAttribPointer(1, 3, GL_FLOAT, GL_FALSE, 0, nullptr);
+        glBindBuffer(GL_ARRAY_BUFFER, this->vbo);
+        glVertexAttribPointer(1, 3, GL_FLOAT, GL_FALSE, stride, (void*)(sizeof(float)*3));
 	}
     Mesh::~Mesh()
     {
-        glDeleteBuffers(1, &this->vertex_vbo);
-        glDeleteBuffers(1, &this->colors_vbo);
+        glDeleteBuffers(1, &this->vbo);
+        glDeleteBuffers(1, &this->ebo);
         glDeleteVertexArrays(1, &vao);
     }
 
     void Mesh::MeshDraw()
     {
         glBindVertexArray(this->vao);
-        glDrawArrays(GL_TRIANGLES, 0, count_vertixes);
+        glDrawElements(GL_TRIANGLES, count_indices, GL_UNSIGNED_INT, 0);
     }
 }

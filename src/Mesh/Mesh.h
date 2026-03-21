@@ -7,14 +7,14 @@ namespace Mesher
 {
 	class Mesh
 	{
-		GLuint vertex_vbo;
-		GLuint colors_vbo;
+		GLuint vbo;
 		GLuint vao;
+		GLuint ebo;
 		float* vertixes;
-		float* colors;
 		GLint count_vertixes;
+		GLint count_indices;
 	public:
-		Mesh(float* vertixes_tmp, float* colors_tmp, GLint count_vertixes_tmp);
+		Mesh(float* vertixes_tmp, GLint count_vertixes_tmp, unsigned int* indices, GLint count_indices_tmp);
 		~Mesh();
 		void MeshDraw();
 	};

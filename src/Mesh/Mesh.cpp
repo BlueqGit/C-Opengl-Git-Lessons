@@ -11,10 +11,9 @@ namespace Mesher
         this->vao = 0;
         this->ebo = 0;
 
-        int c_v_tmp = sizeof(float) * 6 * this->count_vertixes;
+        int stride = 8 * sizeof(float);
+        int c_v_tmp = stride * this->count_vertixes;
         int c_i_tmp = sizeof(unsigned int) * this->count_indices;
-
-        int stride = 6 * sizeof(float);
 
         glGenVertexArrays(1, &this->vao);
         glBindVertexArray(this->vao);
@@ -34,6 +33,10 @@ namespace Mesher
         glEnableVertexAttribArray(1);
         glBindBuffer(GL_ARRAY_BUFFER, this->vbo);
         glVertexAttribPointer(1, 3, GL_FLOAT, GL_FALSE, stride, (void*)(sizeof(float)*3));
+
+        glEnableVertexAttribArray(2);
+        glBindBuffer(GL_ARRAY_BUFFER, this->vbo);
+        glVertexAttribPointer(2, 2, GL_FLOAT, GL_FALSE, stride, (void*)(sizeof(float) * 6));
 	}
     Mesh::~Mesh()
     {

@@ -1,13 +1,14 @@
 #include "Window/Window.h"
 #include "Render/Renderer.h"
 #include "Reader/Reader.h"
+#include "TextureManager/Texture.h"
 
 float vertixes[] = {
-    //pos               //color
-    -0.5f, 0.5f, 0.0f,  1.0f, 0.0f, 0.0f,
-    -0.5f, -0.5f, 0.0f, 0.0f, 1.0f, 0.0f,
-    0.5f, -0.5f, 0.0f,  0.0f, 0.0f, 1.0f,
-    0.5f, 0.5f, 0.0f,   0.0f, 1.0f, 0.0f
+    //pos               //color             //tex cords
+    -0.5f, 0.5f, 0.0f,  1.0f, 0.0f, 0.0f,   1.0f, 1.0f,
+    -0.5f, -0.5f, 0.0f, 0.0f, 1.0f, 0.0f,   1.0f, 0.0f,
+    0.5f, -0.5f, 0.0f,  0.0f, 0.0f, 1.0f,   0.0f, 0.0f,
+    0.5f, 0.5f, 0.0f,   0.0f, 1.0f, 0.0f,   0.0f, 1.0f
 };
 
 unsigned int indices[] = {
@@ -21,8 +22,8 @@ int main(void)
 	glClearColor(0.7, 0.9, 1, 1);
     
     FileReader::Reader Reader;
-    std::string vertex_shader = Reader.GetShaderFile("C:/Users/Vitaly/Desktop/NullEngine/src/ShaderFiles/VertexShader.txt");
-    std::string fragment_shader = Reader.GetShaderFile("C:/Users/Vitaly/Desktop/NullEngine/src/ShaderFiles/FragmentShader.txt");
+    std::string vertex_shader = Reader.GetShaderFile("ShaderFiles/VertexShader.vert");
+    std::string fragment_shader = Reader.GetShaderFile("ShaderFiles/FragmentShader.frag");
 
     Shader::ShaderProgram ShaderP(vertex_shader, fragment_shader);
     if (!ShaderP.isCompiled)
@@ -35,10 +36,11 @@ int main(void)
 
     Renderer::Render Render;
 
+    TextureS::Texture Texture("Textures/1.png", 100, 100, 3);
+
     while (!Window.getWindowShouldClose())
     {
-        Render.Draw(Mesh, ShaderP);
-
+        Render.Draw(Mesh, ShaderP, Texture);
 
         glfwSwapBuffers(Window.getWindow());
         glfwPollEvents();

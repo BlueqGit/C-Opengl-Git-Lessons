@@ -39,4 +39,8 @@ namespace TextureS
 	{
 		return this->texture;
 	}
+	Texture::~Texture()
+	{
+		glDeleteTextures(1, &this->texture);
+	}
 }

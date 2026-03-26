@@ -16,6 +16,7 @@ namespace TextureS
 		int nrChannels;
 	public:
 		Texture(const char* path, int width, int height, int nrChannels);
+		~Texture();
 		Texture(const Texture&) = delete;
 		unsigned int GetTextureID();
 	};

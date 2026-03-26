@@ -1,14 +1,12 @@
 #pragma once
-#include "Mesh/Mesh.h"
 #include "Shader/Shader.h"
-#include "TextureManager/Texture.h"
-
+#include "Entity/Entity.h"
 
 namespace Renderer
 {
 	class Render
 	{
 	public:
-		void Draw(Mesher::Mesh& Mesh, Shader::ShaderProgram& ShaderP, TextureS::Texture& Texture);
+		void Draw(Shader::ShaderProgram& ShaderP, EntityS::Entity& Entity);
 	};
 }

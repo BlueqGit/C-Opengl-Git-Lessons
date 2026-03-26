@@ -2,6 +2,7 @@
 #include "Render/Renderer.h"
 #include "Reader/Reader.h"
 #include "TextureManager/Texture.h"
+#include "Entity/Entity.h"
 
 float vertixes[] = {
     //pos               //color             //tex cords
@@ -38,9 +39,11 @@ int main(void)
 
     TextureS::Texture Texture("Textures/1.png", 100, 100, 3);
 
+    EntityS::Entity Block(0, Mesh, Texture, glm::vec3(0, 0, 0));
+
     while (!Window.getWindowShouldClose())
     {
-        Render.Draw(Mesh, ShaderP, Texture);
+        Render.Draw(ShaderP, Block);
 
         glfwSwapBuffers(Window.getWindow());
         glfwPollEvents();

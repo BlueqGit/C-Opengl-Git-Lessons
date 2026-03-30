@@ -37,6 +37,8 @@ namespace Win
             return;
         }
 
+        glEnable(GL_DEPTH_TEST);
+
         glfwSetWindowUserPointer(this->window, this);
         glfwSetWindowSizeCallback(this->window, glfwWindowSizeCallBack);
         glfwSetKeyCallback(this->window, glfwWindowKeyCallBack);

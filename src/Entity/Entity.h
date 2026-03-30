@@ -9,13 +9,14 @@ namespace EntityS
 	{
 		Mesher::Mesh* mesh;
 		TextureS::Texture* texture;
-	public:
 		glm::vec3 position;
+	public:
 		int id;
 
 		Entity(int id, Mesher::Mesh& mesh, TextureS::Texture& texture, glm::vec3 position);
 
 		Mesher::Mesh* GetMesh();
 		TextureS::Texture* GetTexture();
+		glm::vec3 GetPosition();
 	};
 }

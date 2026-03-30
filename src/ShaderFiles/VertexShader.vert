@@ -4,9 +4,15 @@ layout(location = 1) in vec3 vertex_color;
 layout(location = 2) in vec2 tex_cords;
 out vec3 color;
 out vec2 texture_cords;
+
+uniform mat4 model;
+uniform mat4 projection;
+uniform mat4 view;
+
 void main()
 {
+	gl_Position = model * vec4(vertex_position, 1.0);
+
 	color = vertex_color;
-	gl_Position = vec4(vertex_position, 1.0);
 	texture_cords = tex_cords;
 }

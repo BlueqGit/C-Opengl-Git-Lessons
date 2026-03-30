@@ -48,6 +48,7 @@ namespace Mesher
     void Mesh::MeshDraw()
     {
         glBindVertexArray(this->vao);
-        glDrawElements(GL_TRIANGLES, count_indices, GL_UNSIGNED_INT, 0);
+        //glDrawElements(GL_TRIANGLES, count_indices, GL_UNSIGNED_INT, 0);
+        glDrawArrays(GL_TRIANGLES, 0, 36);
     }
 }

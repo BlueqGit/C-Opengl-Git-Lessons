@@ -18,4 +18,8 @@ namespace EntityS
 	{
 		return this->texture;
 	}
+	glm::vec3 Entity::GetPosition()
+	{
+		return this->position;
+	}
 }

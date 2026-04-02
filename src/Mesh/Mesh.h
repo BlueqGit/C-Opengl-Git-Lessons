@@ -17,5 +17,6 @@ namespace Mesher
 		Mesh(float* vertixes_tmp, GLint count_vertixes_tmp, unsigned int* indices, GLint count_indices_tmp);
 		~Mesh();
 		void MeshDraw();
+		GLuint GetVao();
 	};
 }

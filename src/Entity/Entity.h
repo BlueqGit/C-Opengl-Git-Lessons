@@ -1,5 +1,7 @@
 #pragma once
 #include <glm.hpp>
+#include <gtc/matrix_transform.hpp>
+#include <gtc/type_ptr.hpp>
 #include "Mesh/Mesh.h"
 #include "TextureManager/Texture.h"
 
@@ -10,13 +12,19 @@ namespace EntityS
 		Mesher::Mesh* mesh;
 		TextureS::Texture* texture;
 		glm::vec3 position;
+		glm::vec3 rotate;
+		glm::vec3 scale;
+		int degrees;
 	public:
 		int id;
 
-		Entity(int id, Mesher::Mesh& mesh, TextureS::Texture& texture, glm::vec3 position);
+		Entity(int id, Mesher::Mesh& mesh, TextureS::Texture& texture, glm::vec3 position, glm::vec3 rotate, int degrees, glm::vec3 scale);
 
 		Mesher::Mesh* GetMesh();
 		TextureS::Texture* GetTexture();
 		glm::vec3 GetPosition();
+		glm::vec3 GetRotate();
+		glm::vec3 GetScale();
+		int GetRotateDegrees();
 	};
 }

@@ -11,7 +11,7 @@ uniform mat4 view;
 
 void main()
 {
-	gl_Position = model * vec4(vertex_position, 1.0);
+	gl_Position = projection * view * model * vec4(vertex_position, 1.0);
 
 	color = vertex_color;
 	texture_cords = tex_cords;

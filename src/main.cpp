@@ -8,69 +8,33 @@
 #include <gtc/type_ptr.hpp>
 
 float vertixes[] = {
-        -0.5f, -0.5f, -0.5f,  1.0f, 0.0f, 0.0f, 0.0f, 0.0f,
-         0.5f, -0.5f, -0.5f,  0.0f, 1.0f, 0.0f, 1.0f, 0.0f,
-         0.5f,  0.5f, -0.5f,  0.0f, 0.0f, 1.0f, 1.0f, 1.0f,
-         0.5f,  0.5f, -0.5f,  0.0f, 1.0f, 0.0f, 1.0f, 1.0f,
-        -0.5f,  0.5f, -0.5f,  0.0f, 1.0f, 0.0f, 0.0f, 1.0f,
-        -0.5f, -0.5f, -0.5f,  0.0f, 1.0f, 0.0f, 0.0f, 0.0f,
+        //x     y      z      r     g     b      T     S
+        -0.5f, -0.5f, -0.5f,  1.0f, 0.0f, 0.0f,  1.0f, 0.0f,//bottom right      //задня сторона
+         0.5f, -0.5f, -0.5f,  0.0f, 1.0f, 0.0f,  0.0f, 0.0f,//bottom left
+         0.5f,  0.5f, -0.5f,  0.0f, 0.0f, 1.0f,  0.0f, 1.0f,//top left
+        -0.5f,  0.5f, -0.5f,  0.0f, 1.0f, 0.0f,  1.0f, 1.0f,//top right
 
-        -0.5f, -0.5f,  0.5f,  1.0f, 0.0f, 0.0f, 0.0f, 0.0f,
-         0.5f, -0.5f,  0.5f,  0.0f, 1.0f, 0.0f, 1.0f, 0.0f,
-         0.5f,  0.5f,  0.5f,  0.0f, 0.0f, 1.0f, 1.0f, 1.0f,
-         0.5f,  0.5f,  0.5f,  0.0f, 1.0f, 0.0f, 1.0f, 1.0f,
-        -0.5f,  0.5f,  0.5f,  0.0f, 1.0f, 0.0f, 0.0f, 1.0f,
-        -0.5f, -0.5f,  0.5f,  0.0f, 1.0f, 0.0f, 0.0f, 0.0f,
-
-        -0.5f,  0.5f,  0.5f,  1.0f, 0.0f, 0.0f, 0.0f, 0.0f,
-        -0.5f,  0.5f, -0.5f,  0.0f, 1.0f, 0.0f, 1.0f, 0.0f,
-        -0.5f, -0.5f, -0.5f,  0.0f, 0.0f, 1.0f, 1.0f, 1.0f,
-        -0.5f, -0.5f, -0.5f,  0.0f, 1.0f, 0.0f, 1.0f, 1.0f,
-        -0.5f, -0.5f,  0.5f,  0.0f, 1.0f, 0.0f, 0.0f, 1.0f,
-        -0.5f,  0.5f,  0.5f,  0.0f, 1.0f, 0.0f, 0.0f, 0.0f,
-
-         0.5f,  0.5f,  0.5f,  1.0f, 0.0f, 0.0f, 0.0f, 0.0f,
-         0.5f,  0.5f, -0.5f,  0.0f, 1.0f, 0.0f, 1.0f, 0.0f,
-         0.5f, -0.5f, -0.5f,  0.0f, 0.0f, 1.0f, 1.0f, 1.0f,
-         0.5f, -0.5f, -0.5f,  0.0f, 1.0f, 0.0f, 1.0f, 1.0f,
-         0.5f, -0.5f,  0.5f,  0.0f, 1.0f, 0.0f, 0.0f, 1.0f,
-         0.5f,  0.5f,  0.5f,  0.0f, 1.0f, 0.0f, 0.0f, 0.0f,
-
-        -0.5f, -0.5f, -0.5f,  1.0f, 0.0f, 0.0f, 0.0f, 0.0f,
-         0.5f, -0.5f, -0.5f,  0.0f, 1.0f, 0.0f, 1.0f, 0.0f,
-         0.5f, -0.5f,  0.5f,  0.0f, 0.0f, 1.0f, 1.0f, 1.0f,
-         0.5f, -0.5f,  0.5f,  0.0f, 1.0f, 0.0f, 1.0f, 1.0f,
-        -0.5f, -0.5f,  0.5f,  0.0f, 1.0f, 0.0f, 0.0f, 1.0f,
-        -0.5f, -0.5f, -0.5f,  0.0f, 1.0f, 0.0f, 0.0f, 0.0f,
-
-        -0.5f,  0.5f, -0.5f,  1.0f, 0.0f, 0.0f, 0.0f, 0.0f,
-         0.5f,  0.5f, -0.5f,  0.0f, 1.0f, 0.0f, 1.0f, 0.0f,
-         0.5f,  0.5f,  0.5f,  0.0f, 0.0f, 1.0f, 1.0f, 1.0f,
-         0.5f,  0.5f,  0.5f,  0.0f, 1.0f, 0.0f, 1.0f, 1.0f,
-        -0.5f,  0.5f,  0.5f,  0.0f, 1.0f, 0.0f, 0.0f, 1.0f,
-        -0.5f,  0.5f, -0.5f,  0.0f, 1.0f, 0.0f, 0.0f, 0.0f,
+        -0.5f, -0.5f,  0.5f,  1.0f, 0.0f, 0.0f,  0.0f, 0.0f,//bottom left       //передня сторона
+         0.5f, -0.5f,  0.5f,  0.0f, 1.0f, 0.0f,  1.0f, 0.0f,//bottom right
+         0.5f,  0.5f,  0.5f,  0.0f, 0.0f, 1.0f,  1.0f, 1.0f,//top right
+        -0.5f,  0.5f,  0.5f,  0.0f, 1.0f, 0.0f,  0.0f, 1.0f,//top left
 };
-
-//float vertixes[] = {
-//    //pos               //color             //tex cords
-//    -0.5f, 0.5f, 0.0f,  1.0f, 0.0f, 0.0f,   1.0f, 1.0f,
-//    -0.5f, -0.5f, 0.0f, 0.0f, 1.0f, 0.0f,   1.0f, 0.0f,
-//    0.5f, -0.5f, 0.0f,  0.0f, 0.0f, 1.0f,   0.0f, 0.0f,
-//    0.5f, 0.5f, 0.0f,   0.0f, 1.0f, 0.0f,   0.0f, 1.0f
-//};
-
 
 unsigned int indices[] = {
-    0, 1, 3,
-    1, 2, 3
+    0, 1, 2, 2, 3, 0,
+    4, 5, 6, 6, 7, 4,
+    0, 4, 7, 7, 3, 0,
+    1, 5, 6, 6, 2, 1,
+    0, 1, 5, 5, 4, 0,
+    3, 7, 6, 6, 2, 3
 };
 
-float width = 500;
-float height = 500;
+unsigned int width = 500;
+unsigned int height = 500;
 
 int main(void)
 {
-    Win::Window Window(width, height, "My engine");
+    Win::Window Window(width, height, "My Engine");
 	glClearColor(0.7, 0.9, 1, 1);
     
     FileReader::Reader Reader;
@@ -78,41 +42,19 @@ int main(void)
     std::string fragment_shader = Reader.GetShaderFile("ShaderFiles/FragmentShader.frag");
 
     Shader::ShaderProgram ShaderP(vertex_shader, fragment_shader);
-    if (!ShaderP.isCompiled)
-    {
-        std::cerr << "Can't create Shader Program!" << std::endl;
-        return -1;
-    }
+    Renderer::Render Render(ShaderP, width, height);
 
-    Mesher::Mesh Mesh(vertixes, 36, indices, 6);
-    Renderer::Render Render;
-    TextureS::Texture Texture("Textures/1.png", 100, 100, 3);
-    EntityS::Entity Block(0, Mesh, Texture, glm::vec3(1, 0, 0));
+    Mesher::Mesh Mesh(vertixes, 8, indices, 36);
+    TextureS::Texture Texture("Textures/cat.jpg", 500, 500, 3);
 
-    glm::mat4 model = glm::mat4(1.0f);
-    glm::mat4 view = glm::mat4(1.0f);
-    glm::mat4 projection;
-    GLint model_m_loc = glGetUniformLocation(ShaderP.GetShaderProgram(), "model");
-    GLint view_m_loc = glGetUniformLocation(ShaderP.GetShaderProgram(), "view");
-    GLint projection_m_loc = glGetUniformLocation(ShaderP.GetShaderProgram(), "projection");
-
-    model = glm::rotate(model, glm::radians(-55.0f), glm::vec3(1, 0, 0));
-    view = glm::translate(view, glm::vec3(0.0f, 0.0f, -3.0f));
-    projection = glm::perspective(glm::radians(45.0f), width / height, 0.1f, 100.0f);
-
-    float time;
+    EntityS::Entity Block(0, Mesh, Texture, glm::vec3(0, 0, 0), glm::vec3(1, 0, 0), 0, glm::vec3(1, 1, 1));
 
     while (!Window.getWindowShouldClose())
     {
-        time = glfwGetTime();
-        model = glm::rotate(model, glm::radians(float(sin(time) * 3)), glm::vec3(0, 0, 1));
-        view = glm::translate(view, glm::vec3(0.0f, 0.0f, sin(time) / 500));
+        glClear(GL_COLOR_BUFFER_BIT);
+        glClear(GL_DEPTH_BUFFER_BIT);
 
-        glUniformMatrix4fv(model_m_loc, 1, GL_FALSE, glm::value_ptr(model));
-        glUniformMatrix4fv(view_m_loc, 1, GL_FALSE, glm::value_ptr(view));
-        glUniformMatrix4fv(projection_m_loc, 1, GL_FALSE, glm::value_ptr(projection));
-
-        Render.Draw(ShaderP, Block);
+        Render.Draw(Block);
 
         glfwSwapBuffers(Window.getWindow());
         glfwPollEvents();

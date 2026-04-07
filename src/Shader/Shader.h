@@ -2,7 +2,7 @@
 #include <glad/glad.h>
 #include <iostream>
 
-namespace Shader
+namespace ShaderS
 {
 	class ShaderProgram
 	{

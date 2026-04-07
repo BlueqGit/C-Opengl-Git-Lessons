@@ -1,6 +1,7 @@
 #pragma once
 #include "Shader/Shader.h"
 #include "Entity/Entity.h"
+#include "World/World.h"
 
 namespace Renderer
 {
@@ -12,11 +13,13 @@ namespace Renderer
 		GLint model_m_loc;
 		GLint view_m_loc;
 		GLint projection_m_loc;
-		GLint ShaderProgram;
+		GLint texture_loc;
+		ShaderS::ShaderProgram* ShaderProgram;
 		unsigned int width;
 		unsigned int height;
 	public:
-		Render(Shader::ShaderProgram& ShaderP, unsigned int width, unsigned int height);
-		void Draw(EntityS::Entity& Entity);
+		Render(ShaderS::ShaderProgram& ShaderP, unsigned int width, unsigned int height);
+		void DrawEntity(EntityS::Entity& Entity);
+		void DrawWorld(WorldS::World& World);
 	};
 }

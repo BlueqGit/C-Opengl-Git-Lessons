@@ -1,6 +1,6 @@
 #include "Shader.h"
 
-namespace Shader
+namespace ShaderS
 {
 	ShaderProgram::ShaderProgram(std::string VertexShader, std::string FragmentShader)
 	{

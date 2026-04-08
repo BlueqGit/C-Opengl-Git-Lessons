@@ -2,7 +2,7 @@
 
 namespace ShaderS
 {
-	ShaderProgram::ShaderProgram(std::string VertexShader, std::string FragmentShader)
+	Shader::Shader(std::string VertexShader, std::string FragmentShader)
 	{
 		GLuint vs;
 		GLuint fs;
@@ -24,6 +24,12 @@ namespace ShaderS
 		glAttachShader(this->shaderProgram, fs);
 		glLinkProgram(this->shaderProgram);
 
+
+		this->texture_loc = glGetUniformLocation(this->shaderProgram, "ourTexture");
+		this->model_m_loc = glGetUniformLocation(this->shaderProgram, "model");
+		this->view_m_loc = glGetUniformLocation(this->shaderProgram, "view");
+		this->projection_m_loc = glGetUniformLocation(this->shaderProgram, "projection");
+
 		GLint success;
 		glGetProgramiv(this->shaderProgram, GL_LINK_STATUS, &success);
 		if (!success)
@@ -38,7 +44,7 @@ namespace ShaderS
 		glDeleteShader(fs);
 	}
 
-	bool ShaderProgram::CreateShader(std::string source, GLenum shader_type, GLuint& shader_id)
+	bool Shader::CreateShader(std::string source, GLenum shader_type, GLuint& shader_id)
 	{
 		const char* src = source.c_str();
 		shader_id = glCreateShader(shader_type);
@@ -61,22 +67,22 @@ namespace ShaderS
 		}
 	}
 
-	void ShaderProgram::SetShaderProgram(GLuint id)
+	void Shader::SetShaderProgram(GLuint id)
 	{
 		this->shaderProgram = id;
 	}
 
-	GLuint ShaderProgram::GetShaderProgram()
+	GLuint Shader::GetShaderProgram()
 	{
 		return this->shaderProgram;
 	}
 
-	ShaderProgram::~ShaderProgram()
+	Shader::~Shader()
 	{
 		glDeleteProgram(this->shaderProgram);
 	}
 
-	void ShaderProgram::UseShaderProgram()
+	void Shader::UseShaderProgram()
 	{
 		glUseProgram(this->shaderProgram);
 	}

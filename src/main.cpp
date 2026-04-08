@@ -3,41 +3,39 @@
 #include "Reader/Reader.h"
 #include "TextureManager/Texture.h"
 #include "Entity/Entity.h"
-#include <glm.hpp>
-#include <gtc/matrix_transform.hpp>
-#include <gtc/type_ptr.hpp>
+#include "Camera/Camera.h"
 
 float vertixes[] = {
-    //x     y      z      r     g     b      T     S
-    -0.5f, -0.5f,  0.5f,  0.0f, 1.0f, 0.0f,  0.0f, 0.0f,//bottom left
-     0.5f, -0.5f,  0.5f,  0.0f, 1.0f, 0.0f,  1.0f, 0.0f,//bottom right
-     0.5f,  0.5f,  0.5f,  0.0f, 0.0f, 1.0f,  1.0f, 1.0f,//top right
-    -0.5f,  0.5f,  0.5f,  0.0f, 1.0f, 0.0f,  0.0f, 1.0f,//top left           //FRONT SIDE
+    //x     y      z      T     S
+    -0.5f, -0.5f,  0.5f,  0.0f, 0.0f,//bottom left
+     0.5f, -0.5f,  0.5f,  1.0f, 0.0f,//bottom right
+     0.5f,  0.5f,  0.5f,  1.0f, 1.0f,//top right
+    -0.5f,  0.5f,  0.5f,  0.0f, 1.0f,//top left           //FRONT SIDE
 
-    -0.5f, -0.5f, -0.5f,  0.0f, 1.0f, 0.0f,  0.0f, 0.0f,//bottom left
-    -0.5f, -0.5f,  0.5f,  0.0f, 1.0f, 0.0f,  1.0f, 0.0f,//bottom right
-    -0.5f,  0.5f,  0.5f,  1.0f, 0.0f, 0.0f,  1.0f, 1.0f,//top right
-    -0.5f,  0.5f, -0.5f,  0.0f, 1.0f, 0.0f,  0.0f, 1.0f,//top left           //LEFT SIDE
+    -0.5f, -0.5f, -0.5f,  0.0f, 0.0f,//bottom left
+    -0.5f, -0.5f,  0.5f,  1.0f, 0.0f,//bottom right
+    -0.5f,  0.5f,  0.5f,  1.0f, 1.0f,//top right
+    -0.5f,  0.5f, -0.5f,  0.0f, 1.0f,//top left           //LEFT SIDE
 
-     0.5f, -0.5f, -0.5f,  0.0f, 1.0f, 0.0f,  0.0f, 0.0f,//bottom left
-    -0.5f, -0.5f, -0.5f,  1.0f, 0.0f, 0.0f,  1.0f, 0.0f,//bottom right
-    -0.5f,  0.5f, -0.5f,  0.0f, 1.0f, 0.0f,  1.0f, 1.0f,//top right
-     0.5f,  0.5f, -0.5f,  0.0f, 1.0f, 0.0f,  0.0f, 1.0f,//top left           //BACK SIDE
+     0.5f, -0.5f, -0.5f,  0.0f, 0.0f,//bottom left
+    -0.5f, -0.5f, -0.5f,  1.0f, 0.0f,//bottom right
+    -0.5f,  0.5f, -0.5f,  1.0f, 1.0f,//top right
+     0.5f,  0.5f, -0.5f,  0.0f, 1.0f,//top left           //BACK SIDE
 
-     0.5f, -0.5f,  0.5f,  0.0f, 1.0f, 0.0f,  0.0f, 0.0f,//bottom left
-     0.5f, -0.5f, -0.5f,  0.0f, 1.0f, 0.0f,  1.0f, 0.0f,//bottom right
-     0.5f,  0.5f, -0.5f,  0.0f, 1.0f, 0.0f,  1.0f, 1.0f,//top right
-     0.5f,  0.5f,  0.5f,  0.0f, 1.0f, 0.0f,  0.0f, 1.0f,//top left           //RIGHT SIDE
+     0.5f, -0.5f,  0.5f,  0.0f, 0.0f,//bottom left
+     0.5f, -0.5f, -0.5f,  1.0f, 0.0f,//bottom right
+     0.5f,  0.5f, -0.5f,  1.0f, 1.0f,//top right
+     0.5f,  0.5f,  0.5f,  0.0f, 1.0f,//top left           //RIGHT SIDE
 
-    -0.5f, -0.5f, -0.5f,  1.0f, 0.0f, 0.0f,  0.0f, 0.0f,//bottom left
-     0.5f, -0.5f, -0.5f,  0.0f, 1.0f, 0.0f,  1.0f, 0.0f,//bottom right
-     0.5f, -0.5f,  0.5f,  0.0f, 1.0f, 0.0f,  1.0f, 1.0f,//top right
-    -0.5f, -0.5f,  0.5f,  0.0f, 1.0f, 0.0f,  0.0f, 1.0f,//top left           //BOTTOM SIDE
+    -0.5f, -0.5f, -0.5f,  0.0f, 0.0f,//bottom left
+     0.5f, -0.5f, -0.5f,  1.0f, 0.0f,//bottom right
+     0.5f, -0.5f,  0.5f,  1.0f, 1.0f,//top right
+    -0.5f, -0.5f,  0.5f,  0.0f, 1.0f,//top left           //BOTTOM SIDE
 
-     0.5f,  0.5f,  0.5f,  0.0f, 0.0f, 1.0f,  1.0f, 0.0f,//bottom right
-    -0.5f,  0.5f,  0.5f,  0.0f, 1.0f, 0.0f,  0.0f, 0.0f,//bottom left
-    -0.5f,  0.5f, -0.5f,  0.0f, 1.0f, 0.0f,  0.0f, 1.0f,//top left
-     0.5f,  0.5f, -0.5f,  0.0f, 1.0f, 0.0f,  1.0f, 1.0f,//top right          //TOP SIDE
+     0.5f,  0.5f,  0.5f,  1.0f, 0.0f,//bottom right
+    -0.5f,  0.5f,  0.5f,  0.0f, 0.0f,//bottom left
+    -0.5f,  0.5f, -0.5f,  0.0f, 1.0f,//top left
+     0.5f,  0.5f, -0.5f,  1.0f, 1.0f,//top right          //TOP SIDE
 };
 
 unsigned int indices[] = {
@@ -51,31 +49,47 @@ unsigned int indices[] = {
 
 unsigned int width = 500;
 unsigned int height = 500;
+float deltaTime = 0.0f;
+float lastFrame = 0.0f;
+float currentFrame;
+
+void processInput(GLFWwindow* window, float deltaTime, CameraS::Camera& camera);
 
 int main(void)
 {
-    Win::Window Window(width, height, "My Engine");
+    
+    WindowS::Window Window(width, height, "My Engine");
     FileReader::Reader Reader;
     std::string vertex_shader = Reader.GetShaderFile("ShaderFiles/VertexShader.vert");
     std::string fragment_shader = Reader.GetShaderFile("ShaderFiles/FragmentShader.frag");
-    ShaderS::ShaderProgram ShaderP(vertex_shader, fragment_shader);
-    Renderer::Render Render(ShaderP, width, height);
+    ShaderS::Shader Shader(vertex_shader, fragment_shader);
+    Renderer::Render Render(Shader);
     WorldS::World World;
 
     Mesher::Mesh Mesh(vertixes, 24, indices, 36);
     TextureS::Texture Texture("Textures/cat.jpg", 500, 500, 3);
 
-    EntityS::Entity Block1(0, Mesh, Texture, glm::vec3(-1.0f, 0.0f, 0.0f), glm::vec3(0.0f, 0.0f, 1.0f), 30, glm::vec3(2.0f, 1.0f, 1.0f));
-    EntityS::Entity Block2(0, Mesh, Texture, glm::vec3(1.0f, 0.0f, 0.0f), glm::vec3(0.0f, 1.0f, 0.0f), 120, glm::vec3(1.0f, 1.5f, 2.0f));
+    CameraS::Camera camera(90.0f, 5.0f, width, height);
+    EntityS::Entity Block1(0, Mesh, Texture, glm::vec3(0.0f, 0.0f, 0.0f), glm::vec3(1.0f, 1.0f, 1.0f), 0, glm::vec3(1.0f, 1.0f, 1.0f));
+    EntityS::Entity Block2(0, Mesh, Texture, glm::vec3(0.0f, 2.0f, 2.0f), glm::vec3(1.0f, 1.0f, 1.0f), 0, glm::vec3(1.0f, 1.0f, 1.0f));
+    EntityS::Entity Block3(0, Mesh, Texture, glm::vec3(2.0f, -2.0f, 0.0f), glm::vec3(1.0f, 1.0f, 1.0f), 0, glm::vec3(1.0f, 1.0f, 1.0f));
+    EntityS::Entity Block4(0, Mesh, Texture, glm::vec3(5.0f, -2.0f, 0.0f), glm::vec3(1.0f, 1.0f, 1.0f), 0, glm::vec3(1.0f, 1.0f, 1.0f));
 
     World.AddEntity(Block1);
     World.AddEntity(Block2);
+    World.AddEntity(Block3);
+    World.AddEntity(Block4);
 
     glClearColor(0.7f, 0.9f, 1.0f, 1.0f);
     while (!Window.getWindowShouldClose())
     {
-        Render.DrawWorld(World);
+        currentFrame = glfwGetTime();
+        deltaTime = currentFrame - lastFrame;
+        lastFrame = currentFrame;
 
+        Render.DrawWorld(World, camera);
+
+        processInput(Window.getWindow(), deltaTime, camera);
         glfwSwapBuffers(Window.getWindow());
         glfwPollEvents();
     }
@@ -83,4 +97,25 @@ int main(void)
 
     glfwTerminate();
     return 0;
+}
+
+
+void processInput(GLFWwindow* window, float deltaTime, CameraS::Camera& camera)
+{
+    if (glfwGetKey(window, GLFW_KEY_W) == GLFW_PRESS)
+    {
+        camera.cameraPos += camera.cameraSpeed * camera.cameraFront * deltaTime;
+    }
+    if (glfwGetKey(window, GLFW_KEY_S) == GLFW_PRESS)
+    {
+        camera.cameraPos -= camera.cameraSpeed * camera.cameraFront * deltaTime;
+    }
+    if (glfwGetKey(window, GLFW_KEY_A) == GLFW_PRESS)
+    {
+        camera.cameraPos -= glm::normalize(glm::cross(camera.cameraFront, camera.cameraUp)) * camera.cameraSpeed * deltaTime;
+    }
+    if (glfwGetKey(window, GLFW_KEY_D) == GLFW_PRESS)
+    {
+        camera.cameraPos += glm::normalize(glm::cross(camera.cameraFront, camera.cameraUp)) * camera.cameraSpeed * deltaTime;
+    }
 }

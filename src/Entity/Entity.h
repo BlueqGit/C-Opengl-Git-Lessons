@@ -14,17 +14,17 @@ namespace EntityS
 		glm::vec3 position;
 		glm::vec3 rotate;
 		glm::vec3 scale;
-		int degrees;
+		float degrees;
 	public:
 		int id;
 
-		Entity(int id, Mesher::Mesh& mesh, TextureS::Texture& texture, glm::vec3 position, glm::vec3 rotate, int degrees, glm::vec3 scale);
+		Entity(int id, Mesher::Mesh& mesh, TextureS::Texture& texture, glm::vec3 position, glm::vec3 rotate, float degrees, glm::vec3 scale);
 
 		Mesher::Mesh* GetMesh();
 		TextureS::Texture* GetTexture();
 		glm::vec3 GetPosition();
 		glm::vec3 GetRotate();
 		glm::vec3 GetScale();
-		int GetRotateDegrees();
+		float GetRotateDegrees();
 	};
 }

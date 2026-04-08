@@ -9,6 +9,6 @@ namespace WorldS
 	public:
 		World();
 		void AddEntity(EntityS::Entity& entity);
-		std::vector<EntityS::Entity*>& GetEntities();
+		std::vector<EntityS::Entity*>& getEntities();
 	};
 }

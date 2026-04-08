@@ -1,6 +1,6 @@
 #include "Window.h"
 
-namespace Win
+namespace WindowS
 {
 	Window::Window(int SizeX, int SizeY, char* WinName)
     {

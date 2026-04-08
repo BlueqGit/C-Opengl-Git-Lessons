@@ -2,7 +2,7 @@
 
 namespace EntityS
 {
-	Entity::Entity(int id, Mesher::Mesh& mesh, TextureS::Texture& texture, glm::vec3 position, glm::vec3 rotate, int degrees, glm::vec3 scale)
+	Entity::Entity(int id, Mesher::Mesh& mesh, TextureS::Texture& texture, glm::vec3 position, glm::vec3 rotate, float degrees, glm::vec3 scale)
 	{
 		this->id = id;
 		this->position = position;
@@ -33,7 +33,7 @@ namespace EntityS
 	{
 		return this->scale;
 	}
-	int Entity::GetRotateDegrees()
+	float Entity::GetRotateDegrees()
 	{
 		return this->degrees;
 	}

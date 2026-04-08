@@ -27,6 +27,8 @@ set(ALL_SOURCES
     src/World/World.h
     src/Entity/Entity.cpp
     src/Entity/Entity.h
+    src/Camera/Camera.cpp
+    src/Camera/Camera.h
     ${TEXTURE_FILES}
 )
 

@@ -10,7 +10,7 @@ namespace WorldS
 	{
 		entities.push_back(&entity);
 	}
-	std::vector<EntityS::Entity*>& World::GetEntities()
+	std::vector<EntityS::Entity*>& World::getEntities()
 	{
 		return this->entities;
 	}

@@ -2,11 +2,18 @@
 #include <glad/glad.h>
 #include <GLFW/glfw3.h>
 #include <iostream>
+#include "Camera/Camera.h"
 
-namespace Win
+namespace WindowS
 {
 	class Window
 	{
+		GLFWwindow* window;
+		int windowSizeX;
+		int windowSizeY;
+		char* WindowName;
+		bool windowShouldClose;
+		CameraS::Camera* camera;
 	public:
 		Window(int SizeX, int SizeY, char* WinName);
 		Window() = delete;
@@ -16,11 +23,5 @@ namespace Win
 		static void glfwWindowKeyCallBack(GLFWwindow* window, int key, int scanmode, int action, int mode);
 		GLFWwindow* getWindow();
 		bool getWindowShouldClose();
-	private:
-		GLFWwindow* window;
-		int windowSizeX;
-		int windowSizeY;
-		char* WindowName;
-		bool windowShouldClose;
 	};
 }

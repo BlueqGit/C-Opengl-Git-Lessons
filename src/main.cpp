@@ -47,8 +47,8 @@ unsigned int indices[] = {
     20, 21, 22, 22, 23, 20    //верхня сторона
 };
 
-unsigned int width = 500;
-unsigned int height = 500;
+unsigned int width = 1920;
+unsigned int height = 1080;
 float deltaTime = 0.0f;
 float lastFrame = 0.0f;
 float currentFrame;
@@ -74,11 +74,19 @@ int main(void)
     EntityS::Entity Block2(0, Mesh, Texture, glm::vec3(0.0f, 2.0f, 2.0f), glm::vec3(1.0f, 1.0f, 1.0f), 0, glm::vec3(1.0f, 1.0f, 1.0f));
     EntityS::Entity Block3(0, Mesh, Texture, glm::vec3(2.0f, -2.0f, 0.0f), glm::vec3(1.0f, 1.0f, 1.0f), 0, glm::vec3(1.0f, 1.0f, 1.0f));
     EntityS::Entity Block4(0, Mesh, Texture, glm::vec3(5.0f, -2.0f, 0.0f), glm::vec3(1.0f, 1.0f, 1.0f), 0, glm::vec3(1.0f, 1.0f, 1.0f));
+    EntityS::Entity Block5(0, Mesh, Texture, glm::vec3(0.0f, 1.0f, 1.0f), glm::vec3(1.0f, 1.0f, 1.0f), 0, glm::vec3(1.0f, 1.0f, 1.0f));
+    EntityS::Entity Block6(0, Mesh, Texture, glm::vec3(2.0f, 2.0f, 2.0f), glm::vec3(1.0f, 1.0f, 1.0f), 0, glm::vec3(1.0f, 1.0f, 1.0f));
+    EntityS::Entity Block7(0, Mesh, Texture, glm::vec3(2.0f, -2.0f, 1.0f), glm::vec3(1.0f, 1.0f, 1.0f), 0, glm::vec3(1.0f, 1.0f, 1.0f));
+    EntityS::Entity Block8(0, Mesh, Texture, glm::vec3(5.0f, -2.0f, 1.0f), glm::vec3(1.0f, 1.0f, 1.0f), 0, glm::vec3(1.0f, 1.0f, 1.0f));
 
     World.AddEntity(Block1);
     World.AddEntity(Block2);
     World.AddEntity(Block3);
     World.AddEntity(Block4);
+    World.AddEntity(Block5);
+    World.AddEntity(Block6);
+    World.AddEntity(Block7);
+    World.AddEntity(Block8);
 
     glClearColor(0.7f, 0.9f, 1.0f, 1.0f);
     while (!Window.getWindowShouldClose())

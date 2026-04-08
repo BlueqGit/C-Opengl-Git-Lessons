@@ -2,7 +2,6 @@
 #include <glad/glad.h>
 #include <GLFW/glfw3.h>
 #include <iostream>
-#include "Camera/Camera.h"
 
 namespace WindowS
 {
@@ -13,7 +12,6 @@ namespace WindowS
 		int windowSizeY;
 		char* WindowName;
 		bool windowShouldClose;
-		CameraS::Camera* camera;
 	public:
 		Window(int SizeX, int SizeY, char* WinName);
 		Window() = delete;

@@ -41,9 +41,9 @@ namespace WindowS
 
         glEnable(GL_DEPTH_TEST);
 
+        glfwSetInputMode(this->window, GLFW_CURSOR, GLFW_CURSOR_DISABLED);
         glfwSetWindowUserPointer(this->window, this);
         glfwSetWindowSizeCallback(this->window, glfwWindowSizeCallBack);
-        glfwSetKeyCallback(this->window, glfwWindowKeyCallBack);
 	}
 
     void Window::glfwWindowSizeCallBack(GLFWwindow* window, int width, int height)
@@ -52,16 +52,6 @@ namespace WindowS
         self->windowSizeX = width;
         self->windowSizeY = height;
         glViewport(0, 0, self->windowSizeX, self->windowSizeY);
-    }
-
-    void Window::glfwWindowKeyCallBack(GLFWwindow* window, int key, int scanmode, int action, int mode)
-    {
-        if (key == GLFW_KEY_ESCAPE && action == GLFW_PRESS)
-        {
-            Window* self = static_cast<Window*>(glfwGetWindowUserPointer(window));
-            self->windowShouldClose = GLFW_TRUE;
-            std::cout << "Exite!" << std::endl;
-        }
     }
 
     GLFWwindow* Window::getWindow()
@@ -79,5 +69,10 @@ namespace WindowS
         glfwDestroyWindow(this->window);
         glfwTerminate();
         return;
+    }
+    
+    void Window::windowClose()
+    {
+        this->windowShouldClose = true;
     }
 }

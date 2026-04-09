@@ -18,8 +18,8 @@ namespace WindowS
 		Window(const Window&) = delete;
 		~Window();
 		static void glfwWindowSizeCallBack(GLFWwindow* window, int width, int height);
-		static void glfwWindowKeyCallBack(GLFWwindow* window, int key, int scanmode, int action, int mode);
 		GLFWwindow* getWindow();
 		bool getWindowShouldClose();
+		void windowClose();
 	};
 }

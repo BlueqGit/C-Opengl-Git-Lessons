@@ -13,6 +13,7 @@ namespace Renderer
 		glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 		this->Shader->UseShaderProgram();
 
+
 		std::vector<EntityS::Entity*>& entities = World.getEntities();
 		EntityS::Entity* tmp_entity;
 		

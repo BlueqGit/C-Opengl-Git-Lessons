@@ -4,6 +4,9 @@
 #include "TextureManager/Texture.h"
 #include "Entity/Entity.h"
 #include "Camera/Camera.h"
+#include <glm.hpp>
+#include <gtc/matrix_transform.hpp>
+#include <gtc/type_ptr.hpp>
 
 float vertixes[] = {
     //x     y      z      T     S
@@ -53,7 +56,7 @@ float deltaTime = 0.0f;
 float lastFrame = 0.0f;
 float currentFrame;
 
-void processInput(GLFWwindow* window, float deltaTime, CameraS::Camera& camera);
+void processInput(WindowS::Window& window, float deltaTime, CameraS::Camera& camera);
 
 int main(void)
 {
@@ -69,24 +72,14 @@ int main(void)
     Mesher::Mesh Mesh(vertixes, 24, indices, 36);
     TextureS::Texture Texture("Textures/cat.jpg", 500, 500, 3);
 
-    CameraS::Camera camera(90.0f, 5.0f, width, height);
+    CameraS::Camera camera(Window, width, height, 0.1f, 90.0f, 5.0f);
     EntityS::Entity Block1(0, Mesh, Texture, glm::vec3(0.0f, 0.0f, 0.0f), glm::vec3(1.0f, 1.0f, 1.0f), 0, glm::vec3(1.0f, 1.0f, 1.0f));
-    EntityS::Entity Block2(0, Mesh, Texture, glm::vec3(0.0f, 2.0f, 2.0f), glm::vec3(1.0f, 1.0f, 1.0f), 0, glm::vec3(1.0f, 1.0f, 1.0f));
-    EntityS::Entity Block3(0, Mesh, Texture, glm::vec3(2.0f, -2.0f, 0.0f), glm::vec3(1.0f, 1.0f, 1.0f), 0, glm::vec3(1.0f, 1.0f, 1.0f));
-    EntityS::Entity Block4(0, Mesh, Texture, glm::vec3(5.0f, -2.0f, 0.0f), glm::vec3(1.0f, 1.0f, 1.0f), 0, glm::vec3(1.0f, 1.0f, 1.0f));
-    EntityS::Entity Block5(0, Mesh, Texture, glm::vec3(0.0f, 1.0f, 1.0f), glm::vec3(1.0f, 1.0f, 1.0f), 0, glm::vec3(1.0f, 1.0f, 1.0f));
-    EntityS::Entity Block6(0, Mesh, Texture, glm::vec3(2.0f, 2.0f, 2.0f), glm::vec3(1.0f, 1.0f, 1.0f), 0, glm::vec3(1.0f, 1.0f, 1.0f));
-    EntityS::Entity Block7(0, Mesh, Texture, glm::vec3(2.0f, -2.0f, 1.0f), glm::vec3(1.0f, 1.0f, 1.0f), 0, glm::vec3(1.0f, 1.0f, 1.0f));
-    EntityS::Entity Block8(0, Mesh, Texture, glm::vec3(5.0f, -2.0f, 1.0f), glm::vec3(1.0f, 1.0f, 1.0f), 0, glm::vec3(1.0f, 1.0f, 1.0f));
+    EntityS::Entity Block2(0, Mesh, Texture, glm::vec3(0.0f, 2.0f, 2.0f), glm::vec3(1.0f, 1.0f, 0.0f), 0, glm::vec3(1.0f, 1.0f, 1.0f));
+    EntityS::Entity Block3(0, Mesh, Texture, glm::vec3(2.0f, -2.0f, 0.0f), glm::vec3(1.0f, 0.0f, 1.0f), 0, glm::vec3(1.0f, 1.0f, 1.0f));
 
     World.AddEntity(Block1);
     World.AddEntity(Block2);
     World.AddEntity(Block3);
-    World.AddEntity(Block4);
-    World.AddEntity(Block5);
-    World.AddEntity(Block6);
-    World.AddEntity(Block7);
-    World.AddEntity(Block8);
 
     glClearColor(0.7f, 0.9f, 1.0f, 1.0f);
     while (!Window.getWindowShouldClose())
@@ -97,33 +90,50 @@ int main(void)
 
         Render.DrawWorld(World, camera);
 
-        processInput(Window.getWindow(), deltaTime, camera);
+        processInput(Window, deltaTime, camera);
         glfwSwapBuffers(Window.getWindow());
         glfwPollEvents();
     }
-
-
-    glfwTerminate();
     return 0;
 }
 
 
-void processInput(GLFWwindow* window, float deltaTime, CameraS::Camera& camera)
+void processInput(WindowS::Window& window, float deltaTime, CameraS::Camera& camera)
 {
-    if (glfwGetKey(window, GLFW_KEY_W) == GLFW_PRESS)
+    
+    camera.cameraFront.x = cos(glm::radians(camera.yaw)) * cos(glm::radians(camera.pitch));
+    camera.cameraFront.y = sin(glm::radians(camera.pitch));
+    camera.cameraFront.z = sin(glm::radians(camera.yaw)) * cos(glm::radians(camera.pitch));
+
+    GLFWwindow* window_tmp = window.getWindow();
+
+    if (glfwGetKey(window_tmp, GLFW_KEY_W) == GLFW_PRESS)
     {
         camera.cameraPos += camera.cameraSpeed * camera.cameraFront * deltaTime;
     }
-    if (glfwGetKey(window, GLFW_KEY_S) == GLFW_PRESS)
+    if (glfwGetKey(window_tmp, GLFW_KEY_S) == GLFW_PRESS)
     {
         camera.cameraPos -= camera.cameraSpeed * camera.cameraFront * deltaTime;
     }
-    if (glfwGetKey(window, GLFW_KEY_A) == GLFW_PRESS)
+    if (glfwGetKey(window_tmp, GLFW_KEY_A) == GLFW_PRESS)
     {
         camera.cameraPos -= glm::normalize(glm::cross(camera.cameraFront, camera.cameraUp)) * camera.cameraSpeed * deltaTime;
     }
-    if (glfwGetKey(window, GLFW_KEY_D) == GLFW_PRESS)
+    if (glfwGetKey(window_tmp, GLFW_KEY_D) == GLFW_PRESS)
     {
         camera.cameraPos += glm::normalize(glm::cross(camera.cameraFront, camera.cameraUp)) * camera.cameraSpeed * deltaTime;
+    }
+    if (glfwGetKey(window_tmp, GLFW_KEY_SPACE) == GLFW_PRESS)
+    {
+        camera.cameraPos += camera.cameraUp * camera.cameraSpeed * deltaTime;
+    }
+    if (glfwGetKey(window_tmp, GLFW_KEY_LEFT_SHIFT) == GLFW_PRESS)
+    {
+        camera.cameraPos -= camera.cameraUp * camera.cameraSpeed * deltaTime;
+    }
+    if (glfwGetKey(window_tmp, GLFW_KEY_ESCAPE) == GLFW_PRESS)
+    {
+        window.windowClose();
+        std::cout << "Exite!" << std::endl;
     }
 }
